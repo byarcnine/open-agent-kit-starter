@@ -1,0 +1,45 @@
+{
+  "name": "@open-agent-kit/starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "react-router build && npm run build:embed",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "prebuild": "npm run generate",
+    "generate": "npx prisma generate --schema=./node_modules/@open-agent-kit/core/prisma/schema.prisma",
+    "build:embed": "vite build --config vite.embed.config.ts",
+    "typecheck": "tsc"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "workspaces": [
+    "plugins/*"
+  ],
+  "dependencies": {
+    "@ai-sdk/openai": "^1.1.15",
+    "@open-agent-kit/core": "^0.0.57",
+    "@prisma/client": "^6.3.1",
+    "@react-router/dev": "*",
+    "@react-router/node": "*",
+    "@react-router/serve": "*",
+    "ai": "^4.1.46",
+    "isbot": "^4.1.0",
+    "react-feather": "^2.0.10",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.3",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "prop-types": "^15.8.1",
+    "sass-embedded": "^1.83.4",
+    "tailwindcss": "^4.0.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

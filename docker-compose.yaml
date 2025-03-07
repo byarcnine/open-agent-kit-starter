@@ -1,0 +1,31 @@
+version: "3"
+name: open-agent-kit
+services:
+  open-agent-kit:
+    build: .
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - APP_SECRET=${APP_SECRET}
+      - APP_URL=${APP_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GOOGLE_GENERATIVE_AI_API_KEY=${GOOGLE_GENERATIVE_AI_API_KEY}
+  postgres:
+    image: pgvector/pgvector:pg17
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - oak_postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=open-agent-kit
+volumes:
+  oak_postgres_data:
