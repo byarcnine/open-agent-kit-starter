@@ -27,6 +27,7 @@
     "@react-router/dev": "*",
     "@react-router/node": "*",
     "@react-router/serve": "*",
+    "@vercel/react-router": "^1.1.0",
     "ai": "^4.1.54",
     "isbot": "^5.1.23",
     "react-feather": "^2.0.10",
