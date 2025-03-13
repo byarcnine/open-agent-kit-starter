@@ -3,9 +3,7 @@ import { resolve } from "path";
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { prepareBuildEnv } from "@open-agent-kit/core/utils/prepareBuildEnv";
 import chalk from "chalk";
-prepareBuildEnv();
 
 export default defineConfig({
   publicDir: ".oak/core/public", // Use the symlinked folder instead
