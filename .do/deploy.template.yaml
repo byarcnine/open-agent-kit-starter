@@ -1,7 +1,12 @@
 spec:
   name: open-agent-kit
+  databases:
+    - name: oak-database
+      engine: PG
   services:
     - name: open-agent-kit
+      instance_count: 1
+      dockerfile_path: Dockerfile
       git:
         branch: main
         repo_clone_url: https://github.com/byarcnine/open-agent-kit-starter.git
@@ -17,6 +22,3 @@ spec:
         - key: OPENAI_API_KEY
           type: SECRET
           scope: RUN_TIME
-  databases:
-    - name: oak-database
-      engine: PG
