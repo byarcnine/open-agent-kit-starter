@@ -22,3 +22,9 @@ spec:
         - key: OPENAI_API_KEY
           type: SECRET
           scope: RUN_TIME
+        - key: GOOGLE_GENERATIVE_AI_API_KEY
+          type: SECRET
+          scope: RUN_TIME
+        - key: ANTHROPIC_API_KEY
+          type: SECRET
+          scope: RUN_TIME
