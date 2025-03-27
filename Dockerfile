@@ -22,4 +22,6 @@ COPY --from=build-env /app/node_modules/.prisma /app/node_modules/.prisma
 COPY --from=build-env /app/build /app/build
 WORKDIR /app
 ENV NODE_OPTIONS="--max-old-space-size=4096"
-CMD ["npm", "run", "start"]
+
+# Use the startup script as the command
+CMD npm run migrate:deploy && npm run start

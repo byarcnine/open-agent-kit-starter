@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
+@source "../.oak/core/app";
 
 @plugin "tailwindcss-animate";
 
