@@ -4,10 +4,12 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import chalk from "chalk";
+import { envOnlyMacros } from "vite-env-only";
 
 export default defineConfig({
   publicDir: ".oak/core/public", // Use the symlinked folder instead
   plugins: [
+    envOnlyMacros(),
     tailwindcss(),
     reactRouter(),
     tsconfigPaths(),
