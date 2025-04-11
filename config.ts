@@ -11,6 +11,7 @@ export default {
   models: [
     openai("gpt-4o"),
     openai("gpt-4o-mini"),
+    openai("gpt-4.5-preview"),
     google("gemini-1.5-pro"),
     google("gemini-2.0-flash-001"),
     xai("grok-2-1212"),
