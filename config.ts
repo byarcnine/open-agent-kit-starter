@@ -19,7 +19,4 @@ export default {
     anthropic("claude-3-5-sonnet-latest"),
     anthropic("claude-3-7-sonnet-latest"),
   ],
-  embedding: {
-    model: openai.embedding("text-embedding-3-small"),
-  },
 } satisfies OAKConfig;
