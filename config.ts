@@ -9,6 +9,7 @@ const google = createGoogleGenerativeAI();
 export default {
   name: "OAK Starter",
   models: [
+    openai("gpt-4.1"),
     openai("gpt-4o"),
     openai("gpt-4o-mini"),
     openai("gpt-4.5-preview"),
