@@ -30,6 +30,7 @@ export default defineConfig({
   optimizeDeps: {
     force: true,
     noDiscovery: false,
+    esbuildOptions: { target: "esnext" },
     entries: [".oak/core/app/**/*.tsx", ".oak/core/app/**/*.ts"],
   },
   resolve: {
